@@ -1,120 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Highway Diesel Tech | 24/7 Mobile Truck Repair</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: white;
-        }
-
-        header {
-            background: #222;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 3px solid #f7c600;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-            color: #f7c600;
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .call {
-            background: #f7c600;
-            color: black;
-            padding: 15px;
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-
-        .call a {
-            color: black;
-            text-decoration: none;
-        }
-
-        h2 {
-            color: #f7c600;
-            border-left: 5px solid #f7c600;
-            padding-left: 10px;
-        }
-
-        ul {
-            font-size: 18px;
-            line-height: 1.7;
-        }
-
-        footer {
-            background: #222;
-            padding: 20px;
-            text-align: center;
-            margin-top: 20px;
-            border-top: 3px solid #f7c600;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Highway Diesel Tech – 24/7 Mobile Truck Repair on I‑85</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="24/7 mobile diesel and truck repair on I-85 in Georgia. Roadside assistance, diagnostics, jump start, fuel delivery and more. Call Highway Diesel Tech at (470) 577-7977.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0e1117;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      background: linear-gradient(135deg, #111827, #1f2937);
+      padding: 24px 16px 40px;
+      border-bottom: 2px solid #facc15;
+    }
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .logo span {
+      color: #facc15;
+    }
+    .phone-link {
+      font-weight: 600;
+      border-radius: 999px;
+      padding: 8px 18px;
+      border: 1px solid #facc15;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+    .phone-link small {
+      opacity: 0.8;
+      font-weight: 500;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 24px;
+      align-items: center;
+    }
+    @media (max-width: 780px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+    .hero-title {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 480px) {
+      .hero-title { font-size: 26px; }
+    }
+    .hero-subtitle {
+      font-size: 16px;
+      color: #e5e7eb;
+      margin-bottom: 20px;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .badge {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      background: rgba(17,24,39,0.7);
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .cta-primary {
+      background: #facc15;
+      color: #111827;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .cta-secondary {
+      font-size: 13px;
+      color: #e5e7eb;
+      opacity: 0.9;
+    }
+    .hero-note {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+    .hero-card {
+      border-radius: 16px;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%);
+      border: 1px solid #1f2937;
+      padding: 20px;
+    }
+    .hero-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .hero-list {
+      list-style: none;
+      font-size: 13px;
+      color: #d1d5db;
+    }
+    .hero-list li {
+      padding: 4px 0;
+      display: flex;
+      gap: 6px;
+    }
+    .hero-list li::before {
+      content: "•";
+      color: #facc15;
+    }
+    main {
+      padding: 32px 0 48px;
+    }
+    section {
+      padding: 24px 0;
+      border-bottom: 1px solid #111827;
+    }
+    section:last-of-type {
+      border-bottom: none;
+    }
+    h2.section-title {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      font-size: 14px;
+      color: #9ca3af;
+      margin-bottom: 16px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+    @media (max-width: 780px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    .card {
+      border-radius: 12px;
+      border: 1px solid #1f2937;
+      background: #020617;
+      padding: 16px;
+    }
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .card ul {
+      list-style: none;
+      font-size: 14px;
+      color: #d1d5db;
+    }
+    .card ul li {
+      padding: 3px 0;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .pill {
+      border-radius: 999px;
+      padding: 4px 10px;
+      background: #020617;
+      border: 1px solid #1f2937;
+    }
+    .contact-block {
+      text-align: center;
+      padding: 24px 16px;
+      border-radius: 16px;
+      border: 1px solid #1f2937;
+      background: radial-gradient(circle at top, #111827 0, #020617 60%);
+    }
+    .contact-block h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    .contact-block p {
+      font-size: 14px;
+      color: #e5e7eb;
+      margin-bottom: 14px;
+    }
+    .contact-details {
+      font-size: 14px;
+      color: #d1d5db;
+      margin-top: 8px;
+    }
+    footer {
+      padding: 16px;
+      border-top: 1px solid #111827;
+      font-size: 12px;
+      color: #6b7280;
+      text-align: center;
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="container">
+      <div class="top-bar">
+        <div class="logo"><span>Highway</span> Diesel Tech</div>
+        <a class="phone-link" href="tel:+14705777977">
+          <small>Call 24/7</small>
+          <strong>(470) 577-7977</strong>
+        </a>
+      </div>
+      <div class="hero">
+        <div>
+          <h1 class="hero-title">24/7 Mobile Truck & Roadside Repair on I‑85</h1>
+          <p class="hero-subtitle">
+            Mobile diesel mechanic for semi trucks, box trucks and other commercial vehicles along I‑85 in Georgia.
+            We come to your breakdown location and help you get back on the road.
+          </p>
+          <div class="hero-badges">
+            <div class="badge">I‑85 • Gwinnett • Buford • Braselton</div>
+            <div class="badge">Mobile diagnostics & repair</div>
+            <div class="badge">Heavy‑duty diesel</div>
+          </div>
+          <div class="cta-row">
+            <a class="cta-primary" href="tel:+14705777977">
+              📞 Call now for service
+            </a>
+            <div class="cta-secondary">
+              Tell us your location, truck model and the problem.
+            </div>
+          </div>
+          <div class="hero-note">
+            No towing to the shop if the issue can be safely repaired on the roadside.
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h3>Common roadside services</h3>
+          <ul class="hero-list">
+            <li>Diesel engine diagnostics & fault code checks</li>
+            <li>No‑start / crank‑no‑start troubleshooting</li>
+            <li>Jump start and battery replacement (where available)</li>
+            <li>Minor air leaks & brake issues (roadside‑safe repairs)</li>
+            <li>Fuel delivery and priming after running out of fuel</li>
+            <li>Electrical issues, wiring and sensor checks</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </header>
 
-<header>
-    <h1>Highway Diesel Tech</h1>
-    <p>24/7 Mobile Truck Repair & Roadside Service</p>
-</header>
+  <main>
+    <div class="container">
+      <section id="services">
+        <h2 class="section-title">Mobile truck repair services</h2>
+        <p class="section-sub">
+          We focus on mobile diagnostics and repair for heavy‑duty and diesel trucks. If a repair cannot be safely
+          completed on the roadside, we will diagnose the issue and recommend the best option.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Roadside & on‑site repair</h3>
+            <ul>
+              <li>Semi truck roadside repair</li>
+              <li>Mobile diesel diagnostics</li>
+              <li>No‑start / crank‑no‑start</li>
+              <li>Jump start & battery service</li>
+              <li>Minor air leaks and fittings</li>
+              <li>Lights, wiring and sensor checks</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Diagnostic services</h3>
+            <ul>
+              <li>Check engine light scan</li>
+              <li>Aftertreatment / DEF / DPF diagnostics</li>
+              <li>Live data and performance checks</li>
+              <li>Pre‑repair inspection and recommendations</li>
+              <li>Service documentation on request</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-<div class="container">
+      <section id="area">
+        <h2 class="section-title">Service area – I‑85 corridor in Georgia</h2>
+        <p class="section-sub">
+          Highway Diesel Tech primarily serves the I‑85 corridor northeast of Atlanta. If you are close to this area,
+          call us and we will confirm availability and estimated time of arrival.
+        </p>
+        <div class="pill-row">
+          <div class="pill">Norcross</div>
+          <div class="pill">Duluth</div>
+          <div class="pill">Suwanee</div>
+          <div class="pill">Lawrenceville</div>
+          <div class="pill">Buford / Mall of Georgia</div>
+          <div class="pill">Braselton</div>
+          <div class="pill">Jefferson</div>
+          <div class="pill">Nearby I‑85 truck stops & exits</div>
+        </div>
+      </section>
 
-    <div class="call">
-        <a href="tel:+14705777977">📞 Call Now: (470) 577-7977</a>
-    </div>
+      <section id="why">
+        <h2 class="section-title">Why choose Highway Diesel Tech</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Focused on trucks</h3>
+            <ul>
+              <li>Heavy‑duty diesel and commercial vehicles</li>
+              <li>Mobile service – we come to your location</li>
+              <li>Save time and towing cost where possible</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Professional approach</h3>
+            <ul>
+              <li>Modern diagnostic equipment</li>
+              <li>Clear communication and pricing</li>
+              <li>Local roadside experience on I‑85</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    <h2>Emergency Roadside Service</h2>
-    <p>We provide fast and professional mobile truck repair along I-85, Buford, Braselton, Suwanee, Duluth, and the entire Gwinnett area.</p>
+      <section id="about">
+        <h2 class="section-title">About Highway Diesel Tech</h2>
+        <p class="section-sub">
+          Highway Diesel Tech is an independent mobile truck repair service based in Georgia. We help truck drivers and
+          fleet operators reduce downtime by bringing diagnostics and repair directly to the breakdown location.
+        </p>
+        <p class="section-sub">
+          We work on semi trucks, box trucks and other diesel vehicles. Service is available by phone only – please
+          call to confirm coverage and current availability.
+        </p>
+      </section>
 
-    <h2>Services</h2>
-    <ul>
-        <li>24/7 Roadside Assistance</li>
-        <li>Truck & Trailer Diagnostics</li>
-        <li>Forced DPF Regen</li>
-        <li>Check Engine Light Diagnostics</li>
-        <li>Mobile Mechanic On-Site Repair</li>
-        <li>Air Leak Repair</li>
-        <li>Jump Start</li>
-        <li>Fuel Delivery</li>
-        <li>Tire Replacement & Repair</li>
-        <li>Electrical Troubleshooting</li>
-    </ul>
+      <section id="contact">
+        <div class="contact-block">
+          <h2>Need roadside truck repair right now?</h2>
+          <p>Call Highway Diesel Tech and we will do our best to assist you on I‑85.</p>
+          <a class="cta-primary" href="tel:+14705777977">📞 Call (470) 577‑7977</a>
+          <div class="contact-details">
+            Phone: <a href="tel:+14705777977">(470) 577‑7977</a><br>
+            Email: <a href="mailto:hwydieseltech@gmail.com">hwydieseltech@gmail.com</a><br>
+            Service type: Mobile truck & diesel repair
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 
-    <h2>Why Choose Us?</h2>
-    <ul>
-        <li>Fast arrival to I-85 & surrounding areas</li>
-        <li>Affordable pricing</li>
-        <li>Experienced diesel technician</li>
-        <li>We get you back on the road ASAP</li>
-    </ul>
+  <footer>
+    © <span id="year"></span> Highway Diesel Tech. Mobile truck & diesel repair along I‑85 in Georgia.
+  </footer>
 
-    <div class="call">
-        <a href="tel:+14705777977">📞 Call 24/7: (470) 577-7977</a>
-    </div>
-</div>
-
-<footer>
-    Highway Diesel Tech © 2025 — Mobile Truck Repair Service
-</footer>
-
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
